@@ -1,77 +1,74 @@
-# Proyek Belajar Widget Flutter
+# Flutter Widget Learning Project
 
-Proyek ini adalah perjalanan langkah demi langkah dalam mempelajari widget-widget fundamental di Flutter. Proyek ini dimulai sebagai aplikasi statis dan secara bertahap dikembangkan menjadi aplikasi interaktif.
+This project is a step-by-step journey into learning the fundamental widgets in Flutter. It started as a static application and was gradually developed into an interactive app.
 
-## Evolusi Proyek
+## Project Evolution
 
-### Tahap 1: Kartu Nama Digital (Aplikasi Statis)
+### Phase 1: Digital Business Card (Static App)
+The first application was a simple digital business card. The main focus was on layout and displaying static information.
 
-Aplikasi pertama adalah kartu nama digital sederhana. Fokus utamanya adalah pada layout dan menampilkan informasi statis.
+### Phase 2: Dice App (Interactive App)
+The business card was then replaced with a dice-rolling application. This app introduced the concepts of simple state management, user interaction, and dynamic UI updates.
 
-### Tahap 2: Aplikasi Dadu (Aplikasi Interaktif)
-
-Kartu nama kemudian diganti dengan aplikasi pengocok dadu. Aplikasi ini memperkenalkan konsep state management sederhana, interaksi pengguna, dan pembaruan UI secara dinamis.
-
-### Tahap 3: Penambahan Fitur
-
-- **SnackBar**: Menampilkan notifikasi sementara di bagian bawah layar yang menunjukkan total nilai dari kedua dadu setiap kali dikocok.
-- **AlertDialog**: Menampilkan dialog pop-up "JACKPOT!" ketika pengguna berhasil mendapatkan angka 6 kembar.
+### Phase 3: Feature Additions
+- **SnackBar**: Displays a temporary notification at the bottom of the screen showing the total value of the two dice after each roll.
+- **AlertDialog**: Displays a "JACKPOT!" pop-up dialog when the user successfully rolls double sixes.
 
 ---
 
-## Widget yang Dipelajari
+## Widgets Learned
 
-- **Struktur & Layout:**
-  - `Scaffold`: Kerangka dasar halaman.
-  - `AppBar`: Bilah judul aplikasi.
-  - `Column`: Menyusun widget secara vertikal.
-  - `Row`: Menyusun widget secara horizontal.
-  - `Expanded`: Mengisi ruang yang tersedia di dalam `Row` atau `Column`.
-  - `SafeArea`: Menghindari elemen UI dari halangan layar (seperti notch).
-  - `SizedBox`: Membuat kotak dengan ukuran tertentu, biasanya untuk memberi jarak.
+- **Structure & Layout:**
+  - `Scaffold`: The basic layout structure for a page.
+  - `AppBar`: The application's title bar.
+  - `Column`: Arranges widgets vertically.
+  - `Row`: Arranges widgets horizontally.
+  - `Expanded`: Fills the available space within a `Row` or `Column`.
+  - `SafeArea`: Avoids UI elements from being obstructed by screen features (like a notch).
+  - `SizedBox`: Creates a box with a specific size, typically used for spacing.
 
-- **Tampilan Informasi:**
-  - `Text`: Menampilkan teks.
-  - `TextStyle`: Memberi gaya pada teks (font, warna, ukuran).
-  - `Icon`: Menampilkan ikon dari library Material Design.
-  - `Image.asset`: Menampilkan gambar dari folder lokal proyek.
-  - `CircleAvatar`: Menampilkan avatar/gambar dalam bentuk lingkaran.
+- **Information Display:**
+  - `Text`: Displays text.
+  - `TextStyle`: Styles text (font, color, size).
+  - `Icon`: Displays an icon from the Material Design library.
+  - `Image.asset`: Displays an image from a local project folder.
+  - `CircleAvatar`: Displays an avatar/image in a circular shape.
 
-- **Kontainer & Grup:**
-  - `Card`: Kartu dengan sedikit bayangan.
-  - `ListTile`: Baris standar yang biasanya berisi ikon dan teks.
+- **Containers & Grouping:**
+  - `Card`: A card with a slight shadow.
+  - `ListTile`: A standard row that usually contains an icon and text.
 
-- **Interaktif & Notifikasi:**
-  - `TextButton`: Tombol sederhana dengan teks atau widget lain di dalamnya.
-  - `SnackBar`: Notifikasi sementara di bagian bawah layar.
-  - `AlertDialog`: Kotak dialog pop-up untuk pesan penting.
+- **Interactive & Notifications:**
+  - `TextButton`: A simple button with text or another widget inside it.
+  - `SnackBar`: A temporary notification at the bottom of the screen.
+  - `AlertDialog`: A pop-up dialog box for important messages.
 
 ---
 
-## Konsep yang Dipelajari
+## Concepts Learned
 
-- **`StatelessWidget` vs `StatefulWidget`**: Perbedaan antara widget statis dan dinamis.
-- **`setState()`**: Metode krusial untuk memberi tahu Flutter agar membangun ulang UI saat data berubah.
-- **Aset & `pubspec.yaml`**: Cara menambahkan gambar dan font kustom ke dalam proyek.
-- **Event Handling**: Menggunakan `onPressed` untuk merespons input pengguna.
-- **Refactoring**: Mengubah struktur kode (misalnya memindahkan `Scaffold`) untuk menambahkan fitur baru tanpa merusak fungsionalitas yang ada.
-- **`ScaffoldMessenger`**: Cara modern untuk menampilkan `SnackBar`.
-- **`Navigator`**: Mengelola tumpukan layar/dialog, khususnya menggunakan `Navigator.of(context).pop()` untuk menutup dialog.
-- **Widget Testing**: Menulis dan menjalankan tes otomatis untuk memverifikasi fungsionalitas UI menggunakan `flutter_test`.
+- **`StatelessWidget` vs `StatefulWidget`**: The difference between static and dynamic widgets.
+- **`setState()`**: The crucial method to tell Flutter to rebuild the UI when data changes.
+- **Assets & `pubspec.yaml`**: How to add custom images and fonts to a project.
+- **Event Handling**: Using `onPressed` to respond to user input.
+- **Refactoring**: Changing the code structure (e.g., moving the `Scaffold`) to add new features without breaking existing functionality.
+- **`ScaffoldMessenger`**: The modern way to display a `SnackBar`.
+- **`Navigator`**: Managing the screen/dialog stack, specifically using `Navigator.of(context).pop()` to close a dialog.
+- **Widget Testing**: Writing and running automated tests to verify UI functionality using `flutter_test`.
 
-## Cara Menjalankan Aplikasi
+## How to Run the Application
 
-1. Pastikan Anda sudah menginstal Flutter SDK.
-2. Clone atau unduh proyek ini.
-3. Buka terminal di direktori proyek dan jalankan:
+1. Ensure you have the Flutter SDK installed.
+2. Clone or download this project.
+3. Open a terminal in the project directory and run:
    ```sh
    flutter pub get
    flutter run
    ```
 
-## Cara Menjalankan Tes
+## How to Run Tests
 
-Buka terminal di direktori proyek dan jalankan:
+Open a terminal in the project directory and run:
 ```sh
 flutter test
 ```
