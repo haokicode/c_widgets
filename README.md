@@ -1,6 +1,6 @@
 # Flutter Widget Learning Project
 
-This project is a step-by-step journey into learning the fundamental widgets in Flutter. It started as a static application and was gradually developed into an interactive app.
+This project is a step-by-step journey into learning the fundamental widgets in Flutter. It started as a static application and was gradually developed into an interactive, well-structured app.
 
 ## Project Evolution
 
@@ -10,51 +10,46 @@ The first application was a simple digital business card. The main focus was on 
 ### Phase 2: Dice App (Interactive App)
 The business card was then replaced with a dice-rolling application. This app introduced the concepts of simple state management, user interaction, and dynamic UI updates.
 
-### Phase 3: Feature Additions
+### Phase 3: Adding Notifications
 - **SnackBar**: Displays a temporary notification at the bottom of the screen showing the total value of the two dice after each roll.
 - **AlertDialog**: Displays a "JACKPOT!" pop-up dialog when the user successfully rolls double sixes.
+
+### Phase 4: History & Code Refactoring
+- **ListView**: A scrollable list was added to show the history of all dice rolls.
+- **Clean Code & OOP**: The entire application was refactored into smaller, single-responsibility widgets (`DiceView`, `HistoryListView`) to follow Clean Code and Object-Oriented Programming principles.
 
 ---
 
 ## Widgets Learned
 
 - **Structure & Layout:**
-  - `Scaffold`: The basic layout structure for a page.
-  - `AppBar`: The application's title bar.
-  - `Column`: Arranges widgets vertically.
-  - `Row`: Arranges widgets horizontally.
-  - `Expanded`: Fills the available space within a `Row` or `Column`.
-  - `SafeArea`: Avoids UI elements from being obstructed by screen features (like a notch).
-  - `SizedBox`: Creates a box with a specific size, typically used for spacing.
+  - `Scaffold`, `AppBar`, `Column`, `Row`, `SafeArea`, `SizedBox`
 
 - **Information Display:**
-  - `Text`: Displays text.
-  - `TextStyle`: Styles text (font, color, size).
-  - `Icon`: Displays an icon from the Material Design library.
-  - `Image.asset`: Displays an image from a local project folder.
-  - `CircleAvatar`: Displays an avatar/image in a circular shape.
+  - `Text` & `TextStyle`, `Icon`, `Image.asset`, `CircleAvatar`
 
-- **Containers & Grouping:**
-  - `Card`: A card with a slight shadow.
-  - `ListTile`: A standard row that usually contains an icon and text.
+- **Containers & Lists:**
+  - `Card`, `ListTile`
+  - `ListView.builder`: To efficiently create a scrollable list of items.
+  - `Expanded`: To control the sizing of children within a `Column` or `Row`, especially for lists.
 
 - **Interactive & Notifications:**
-  - `TextButton`: A simple button with text or another widget inside it.
-  - `SnackBar`: A temporary notification at the bottom of the screen.
-  - `AlertDialog`: A pop-up dialog box for important messages.
+  - `TextButton`, `SnackBar`, `AlertDialog`
 
 ---
 
 ## Concepts Learned
 
-- **`StatelessWidget` vs `StatefulWidget`**: The difference between static and dynamic widgets.
+- **`StatelessWidget` vs `StatefulWidget`**: The core of Flutter's UI paradigm.
 - **`setState()`**: The crucial method to tell Flutter to rebuild the UI when data changes.
 - **Assets & `pubspec.yaml`**: How to add custom images and fonts to a project.
 - **Event Handling**: Using `onPressed` to respond to user input.
-- **Refactoring**: Changing the code structure (e.g., moving the `Scaffold`) to add new features without breaking existing functionality.
-- **`ScaffoldMessenger`**: The modern way to display a `SnackBar`.
-- **`Navigator`**: Managing the screen/dialog stack, specifically using `Navigator.of(context).pop()` to close a dialog.
-- **Widget Testing**: Writing and running automated tests to verify UI functionality using `flutter_test`.
+- **Clean Architecture & OOP**:
+  - **Single Responsibility Principle**: Refactoring a large widget into smaller, focused widgets (e.g., `DiceView`, `HistoryListView`).
+  - **UI Composition**: Building a complex UI by composing simple, reusable widgets.
+  - **One-Way Data Flow**: State is held in a top-level widget and flows down to child widgets, while events flow up via callbacks.
+- **`ScaffoldMessenger` & `Navigator`**: Modern ways to handle notifications and dialogs.
+- **Widget Testing**: Writing and updating automated tests to verify UI functionality and behavior as the app evolves.
 
 ## How to Run the Application
 
