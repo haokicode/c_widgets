@@ -1,55 +1,56 @@
 # Flutter Widget Learning Project
 
-This project is a step-by-step journey into learning the fundamental widgets in Flutter. It started as a static application and was gradually developed into an interactive, well-structured app.
+This project is a step-by-step journey into learning the fundamental widgets in Flutter. It started as a static application and was gradually developed into a complete, interactive, and well-structured mini-app.
 
 ## Project Evolution
 
 ### Phase 1: Digital Business Card (Static App)
-The first application was a simple digital business card. The main focus was on layout and displaying static information.
+Focused on layout and displaying static information (`Column`, `Row`, `Card`, `CircleAvatar`).
 
 ### Phase 2: Dice App (Interactive App)
-The business card was then replaced with a dice-rolling application. This app introduced the concepts of simple state management, user interaction, and dynamic UI updates.
+Introduced `StatefulWidget`, `setState`, and user interaction to dynamically update the UI.
 
 ### Phase 3: Adding Notifications
-- **SnackBar**: Displays a temporary notification at the bottom of the screen showing the total value of the two dice after each roll.
-- **AlertDialog**: Displays a "JACKPOT!" pop-up dialog when the user successfully rolls double sixes.
+- **SnackBar**: Added temporary notifications to show the dice total.
+- **AlertDialog**: Added a pop-up dialog for a "Jackpot" event.
 
 ### Phase 4: History & Code Refactoring
-- **ListView**: A scrollable list was added to show the history of all dice rolls.
-- **Clean Code & OOP**: The entire application was refactored into smaller, single-responsibility widgets (`DiceView`, `HistoryListView`) to follow Clean Code and Object-Oriented Programming principles.
+- **ListView**: A scrollable history of all dice rolls was added.
+- **Clean Code & OOP**: The app was refactored into smaller, single-responsibility widgets (`DiceView`, `HistoryListView`).
+
+### Phase 5: UI/UX Refinement
+- **FloatingActionButton**: The primary action of rolling the dice was moved to a `FloatingActionButton` (FAB) for a more standard user experience.
+- **AppBar Actions**: An action was added to the `AppBar` to clear the entire history.
+
+### Phase 6: Modern UX Patterns
+- **Dismissible**: Implemented the "swipe-to-delete" pattern on history items, replacing the delete button with a more intuitive gesture.
 
 ---
 
-## Widgets Learned
+## Widgets & Concepts Learned
 
-- **Structure & Layout:**
-  - `Scaffold`, `AppBar`, `Column`, `Row`, `SafeArea`, `SizedBox`
+- **Layout & Structure**:
+  - `Scaffold`, `AppBar` (with `actions`), `Column`, `Row`, `SafeArea`, `SizedBox`, `Expanded`
 
-- **Information Display:**
+- **Information Display**:
   - `Text` & `TextStyle`, `Icon`, `Image.asset`, `CircleAvatar`
 
-- **Containers & Lists:**
-  - `Card`, `ListTile`
-  - `ListView.builder`: To efficiently create a scrollable list of items.
-  - `Expanded`: To control the sizing of children within a `Column` or `Row`, especially for lists.
+- **Containers & Lists**:
+  - `Card`, `ListTile`,
+  - `ListView.builder`: For efficiently creating scrollable lists.
+  - `Dismissible`: For adding swipe gestures to list items.
 
-- **Interactive & Notifications:**
-  - `TextButton`, `SnackBar`, `AlertDialog`
+- **Interactive & Notifications**:
+  - `FloatingActionButton`, `IconButton`, `TextButton`
+  - `SnackBar`, `AlertDialog`
 
----
-
-## Concepts Learned
-
-- **`StatelessWidget` vs `StatefulWidget`**: The core of Flutter's UI paradigm.
-- **`setState()`**: The crucial method to tell Flutter to rebuild the UI when data changes.
-- **Assets & `pubspec.yaml`**: How to add custom images and fonts to a project.
-- **Event Handling**: Using `onPressed` to respond to user input.
-- **Clean Architecture & OOP**:
-  - **Single Responsibility Principle**: Refactoring a large widget into smaller, focused widgets (e.g., `DiceView`, `HistoryListView`).
-  - **UI Composition**: Building a complex UI by composing simple, reusable widgets.
-  - **One-Way Data Flow**: State is held in a top-level widget and flows down to child widgets, while events flow up via callbacks.
-- **`ScaffoldMessenger` & `Navigator`**: Modern ways to handle notifications and dialogs.
-- **Widget Testing**: Writing and updating automated tests to verify UI functionality and behavior as the app evolves.
+- **Core Concepts**:
+  - **`StatelessWidget` vs `StatefulWidget`**: The core of Flutter's UI paradigm.
+  - **`setState()`**: The crucial method to trigger UI rebuilds.
+  - **`Key` (e.g., `UniqueKey()`)**: The importance of unique keys for widgets in dynamic lists.
+  - **Child-to-Parent Communication**: Using callback functions (`Function(int)`) to pass events up the widget tree.
+  - **Clean Architecture & OOP**: Single Responsibility Principle, UI Composition, and One-Way Data Flow.
+  - **Widget Testing**: Writing and updating automated tests (`flutter_test`) to verify UI behavior, including user interactions like taps and drags.
 
 ## How to Run the Application
 
